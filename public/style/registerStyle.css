@@ -2,17 +2,10 @@
     margin-left: 60%;
     display:flex;
     flex-direction: column;
-    margin-bottom: 100px;
     margin-top:20px;
 }
 .backgroundImg{
     background: url("../image/register1.jpg");
-    background-repeat: no-repeat;
-    -moz-background-size:cover;
-    -ms-background-size:cover;
-    -webkit-background-size:cover;
-    background-size:cover;
-
 }
 .container-fluid {
     padding-right: 0px;

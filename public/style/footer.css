@@ -1,0 +1,36 @@
+.content{
+    margin-top:20px;
+}
+
+.spanType{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+hr{
+    width:80%;
+}
+.spanStyle{
+   width:33.3%;
+    font-size: 18px;
+    line-height: 18px;
+    box-sizing: border-box;
+    padding: 18px 18px 0px 18px;
+}
+
+.ulStyle li{
+    display: inline-block;
+    list-style-type: none;
+    margin-right: 10px;
+    border-right: 1px solid white;
+    padding-right: 10px;
+}
+
+.ulStyle{
+    text-align: center;
+}
+
+.location{
+    text-align: center;
+    margin-bottom: 30px;
+}
