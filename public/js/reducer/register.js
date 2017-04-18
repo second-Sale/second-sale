@@ -1,3 +1,6 @@
-/**
- * Created by liyan on 17-4-18.
- */
+module.exports = ((state={},action)=>{
+    switch(action.type){
+        case 'REGISTER_COMMIT':return action.data;break;
+        default: return state;
+    }
+})
