@@ -3,6 +3,12 @@ import Header from "../containers/header";
 import Footer from "../containers/footer"
 
 class Register extends Component {
+    addUser(){
+        var userName = document.getElementById("userName").value;
+        var password = document.getElementById("password").value;
+        var confirm = document.getElementById("confirm").value;
+        this.props.onSubmit({userName,password,confirm});
+    }
     render() {
         return <div>
             <Header/>
@@ -21,7 +27,7 @@ class Register extends Component {
                                 <input type="password" className="inputStyle" id="confirm" placeholder="请再次输入密码"/>
                             </div>
                             <div>
-                                <button type="submit" className="buttonType">注册</button>
+                                <button type="submit" className="buttonType" onClick={this.addUser.bind(this)}>注册</button>
                             </div>
                         </div>
                     </center>
