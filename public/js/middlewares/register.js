@@ -17,7 +17,7 @@ export default store => next => action => {
                 .end((err, res)=> {
                     console.log(res.body.value);
                     next({type: 'REGISTER_COMMIT', data: res.body.value})
-                })
+                });
         }
         }
     else {
