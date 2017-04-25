@@ -1,6 +1,11 @@
 import {connect} from 'react-redux';
 import Register from '../components/register.js';
-
+const mapStateToProps = (state) =>{
+    console.log(state);
+    return {
+       isExit: state.addUser.isExitUser
+    }
+}
 const mapDispatchToProps = (dispatch) => {
     return {
         onSubmit: (data) => {
@@ -8,4 +13,4 @@ const mapDispatchToProps = (dispatch) => {
         }
     }
 };
-export default connect(() => {return {}},mapDispatchToProps)(Register);
+export default connect(mapStateToProps,mapDispatchToProps)(Register);
