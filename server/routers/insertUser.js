@@ -8,11 +8,11 @@ router.post('/addUser',function(req,res){
     console.log("user",userInformation);
     findUser(userInformation,(result) => {
         if(result.length !== 0){
-            res.json({value:"用户已存在"});
+            res.send(true);
         }else{
             insertUser(userInformation, (result)=> {
                 console.log(result);
-                res.json({value: "注册成功"});
+                res.send(false);
             });
         }
     })

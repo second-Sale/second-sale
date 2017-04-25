@@ -7,6 +7,13 @@
 .backgroundImg{
     background: url("../image/register1.jpg");
 }
+.warning{
+    color:red;
+    padding:10px;
+    font-size: 18px;
+    width: 70%;
+    margin-bottom: 10px;
+}
 .container-fluid {
     padding-right: 0px;
     padding-left: 0px;
