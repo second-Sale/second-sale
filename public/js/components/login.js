@@ -16,6 +16,18 @@ class Login extends Component{
         }
     }
 
+    componentDidUpdate(){
+        var isRight=this.props.isRight;
+        console.log("component",typeof(isRight));
+        if(isRight === "0"){
+            document.getElementById("warn").innerHTML = "用户不存在";
+        }else if(isRight === "-1"){
+            document.getElementById("warn").innerHTML = "密码错误";
+        }else{
+            document.getElementById("warn").innerHTML = "登录成功";
+        }
+    }
+
     render(){
         return <div>
             <Header/>
