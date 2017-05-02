@@ -3,6 +3,7 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const session = require('express-session');
 const addUser=require('./server/routers/insertUser');
+const login = require("./server/routers/login");
 
 const app = new express();
 
@@ -17,6 +18,7 @@ app.use(session({
 }));
 
 app.use('/',addUser);
+app.use('/',login);
 
 app.get('*', (req, res) => {
     "use strict";

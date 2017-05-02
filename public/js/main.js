@@ -7,8 +7,10 @@ import App from "./containers/App";
 import Register from "./containers/register";
 import Login from "./containers/login";
 import reducer from "./reducer/index";
-import ResgierMiddleware from './middlewares/register'
-const createStoreWithMiddleware = applyMiddleware(ResgierMiddleware)(createStore);
+import ResgierMiddleware from './middlewares/register';
+import LoginMiddleware from "./middlewares/login";
+
+const createStoreWithMiddleware = applyMiddleware(ResgierMiddleware,LoginMiddleware)(createStore);
 
 const store = createStoreWithMiddleware(reducer);
 
