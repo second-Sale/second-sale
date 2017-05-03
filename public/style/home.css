@@ -1,0 +1,30 @@
+.tip{
+    background-color: #333;
+    height:40px;
+}
+
+.topic{
+    font-size: 14px;
+    line-height: 40px;
+    float:left;
+    padding-left: 50px;
+    color: white;
+}
+
+.userInformation{
+    font-size: 14px;
+    line-height: 40px;
+    float:right;
+    padding-right: 50px;
+    color: white;
+}
+a{
+    color:white;
+}
+.login{
+    margin-right: 20px;
+}
+
+.logoName{
+    text-align: center;
+}
