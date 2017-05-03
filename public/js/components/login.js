@@ -7,6 +7,7 @@ class Login extends Component{
     judge(){
         var userName = document.getElementById("userName").value;
         var password = document.getElementById("password").value;
+        console.log(typeof(password));
         if(userName ===""){
             document.getElementById("warn").innerHTML = "用户名不能为空";
         }else if(password === ""){
@@ -18,7 +19,6 @@ class Login extends Component{
 
     componentDidUpdate(){
         var isRight=this.props.isRight;
-        console.log("component",typeof(isRight));
         if(isRight === "0"){
             document.getElementById("warn").innerHTML = "用户不存在";
         }else if(isRight === "-1"){
