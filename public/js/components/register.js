@@ -27,7 +27,7 @@ class Register extends Component {
             console.log("isExit=1:",this.props.isExit);
             document.getElementById('warn').innerHTML = '用户已存在';
         }else{
-            browserHistory.push('/home');
+            browserHistory.push('/login');
         }
     }
     render() {
