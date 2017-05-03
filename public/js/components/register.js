@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import Header from "../containers/header";
 import Footer from "../containers/footer"
+import {Link, browserHistory} from 'react-router';
 
 class Register extends Component {
     addUser(){
@@ -21,13 +22,12 @@ class Register extends Component {
     }
     componentDidUpdate(){
         let isExit = this.props.isExit;
-        console.log("dcdd",typeof(isExit));
-
+         console.log("isExist", this.props.isExit);
         if(isExit){
+            console.log("isExit=1:",this.props.isExit);
             document.getElementById('warn').innerHTML = '用户已存在';
-        }
-        else{
-            document.getElementById('warn').innerHTML = '注册成功';
+        }else{
+            browserHistory.push('/home');
         }
     }
     render() {

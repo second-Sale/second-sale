@@ -1,7 +1,7 @@
 import {connect} from 'react-redux';
 import Register from '../components/register.js';
 const mapStateToProps = (state) =>{
-    console.log(state);
+    console.log("state:",state);
     return {
        isExit: state.addUser.isExitUser
     }

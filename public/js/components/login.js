@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import Header from "../containers/header";
 import Footer from "../containers/footer";
+import {Link, browserHistory} from 'react-router';
 
 class Login extends Component{
 
@@ -24,7 +25,7 @@ class Login extends Component{
         }else if(isRight === "-1"){
             document.getElementById("warn").innerHTML = "密码错误";
         }else{
-            document.getElementById("warn").innerHTML = "登录成功";
+            browserHistory.push('/home');
         }
     }
 
