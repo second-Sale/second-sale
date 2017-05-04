@@ -1,6 +1,7 @@
 const express=require("express");
 const router=express.Router();
 const findUser=require("../dbs/find-user");
+//const cookieParser = require("cookie-parser");
 
 router.post("/login",function(req,res){
    var informationUser=req.body;
@@ -11,6 +12,7 @@ router.post("/login",function(req,res){
                 res.send({isTrue:"-1"});
             }else{
                 res.send({isTrue:"1"});
+                console.log(req.headers.cookie);
             }
 
     })

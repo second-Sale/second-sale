@@ -39,6 +39,7 @@
     "babel-register": "^6.11.6",
     "chai": "^3.5.0",
     "config": "^1.21.0",
+    "cookie-parser": "^1.4.3",
     "css-loader": "^0.23.1",
     "eslint": "^3.2.2",
     "eslint-plugin-react": "^6.0.0",

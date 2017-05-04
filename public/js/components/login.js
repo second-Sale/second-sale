@@ -8,7 +8,6 @@ class Login extends Component{
     judge(){
         var userName = document.getElementById("userName").value;
         var password = document.getElementById("password").value;
-        console.log(typeof(password));
         if(userName ===""){
             document.getElementById("warn").innerHTML = "用户名不能为空";
         }else if(password === ""){
@@ -26,6 +25,10 @@ class Login extends Component{
             document.getElementById("warn").innerHTML = "密码错误";
         }else{
             browserHistory.push('/home');
+            var userName = document.getElementById('userName').value;
+            console.log("cookie",userName);
+            document.cookie = 'name=username;path=/;domain=domain;secure';
+            console.log("document.cookie",document.cookie);
         }
     }
 
