@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 import {Link, browserHistory} from 'react-router';
 
-class Home extends Component{
+class Nav extends Component{
     render(){
         return <div>
             <div className="tip">
@@ -14,8 +14,15 @@ class Home extends Component{
             <div className="logo">
                 <h1 className="logoName">二手交易市场</h1>
             </div>
+            <div>
+                <ul className="nav">
+                    <li>首页</li>
+                    <li>发布信息</li>
+                    <li>个人中心</li>
+                </ul>
+            </div>
         </div>
     }
 }
 
-export default Home;
+export default Nav;

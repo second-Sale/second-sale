@@ -1,4 +1,4 @@
 import {connect} from 'react-redux';
-import Home from '../components/nav';
+import Nav from '../components/nav';
 
-export default connect()(Home);
+export default connect()(Nav);

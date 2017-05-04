@@ -9,7 +9,8 @@ import Login from "./containers/login";
 import reducer from "./reducer/index";
 import ResgierMiddleware from './middlewares/register';
 import LoginMiddleware from "./middlewares/login";
-import Home from './containers/nav';
+import Nav from './containers/nav';
+import PostMessage from './containers/postMessage';
 const createStoreWithMiddleware = applyMiddleware(ResgierMiddleware,LoginMiddleware)(createStore);
 
 const store = createStoreWithMiddleware(reducer);
@@ -18,9 +19,9 @@ render(
     <Provider store={store}>
         <Router history={browserHistory}>
             <Route path="/" component={App}/>
-            <Route path="/home" component={Home}/>
+            <Route path="/home" component={Nav}/>
             <Route path="/register" component={Register}/>
             <Route path="/login" component={Login}/>
-
+            <Route path="/postMessage" component={PostMessage}/>
         </Router>
     </Provider>, document.getElementById('app'));

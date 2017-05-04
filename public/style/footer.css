@@ -1,5 +1,6 @@
 .content{
-    margin-top:20px;
+
+    background-color: #333333;
 }
 
 .spanType{
@@ -16,6 +17,7 @@ hr{
     line-height: 18px;
     box-sizing: border-box;
     padding: 18px 18px 0px 18px;
+    color: white;
 }
 
 .ulStyle li{
@@ -23,14 +25,17 @@ hr{
     list-style-type: none;
     margin-right: 10px;
     border-right: 1px solid black;
+    color: white;
     padding-right: 10px;
 }
 
 .ulStyle{
     text-align: center;
+
 }
 
 .location{
     text-align: center;
-    margin-bottom: 30px;
+    color:white;
+    margin-top: 30px;
 }

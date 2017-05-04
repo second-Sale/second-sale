@@ -5,7 +5,8 @@
     margin-top:20px;
 }
 .backgroundImg{
-    background: url("../image/register1.jpg");
+    /*background: url("../image/register1.jpg");*/
+    background: url(http://yanxuan.nosdn.127.net/6c20940c7b36612b0ed4d7b0a8a4aafe.jpg) center no-repeat;
 }
 .warning{
     color:red;
@@ -56,13 +57,9 @@
     border-radius:4px;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
-    background-color: white;
     color: black;
     border: 2px solid #ccc;
     margin-bottom: 30px;
+    background-color: #b4a078;
 }
 
-.buttonType:hover{
-    background-color: #008CBA;
-    color: white;
-}

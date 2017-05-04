@@ -28,3 +28,16 @@ a{
 .logoName{
     text-align: center;
 }
+.nav{
+    text-align: center;
+}
+.nav li{
+    display:none;
+    display:inline;
+    list-style: none;
+    font-size: 16px;
+    line-height: 30px;
+    font-family: "Microsoft Yahei","微软雅黑",verdana;
+    font-weight: 700;
+    margin: 10%;
+}
