@@ -1,19 +1,29 @@
 const express=require("express");
 const router=express.Router();
 const findUser=require("../dbs/find-user");
-//const cookieParser = require("cookie-parser");
 
 router.post("/login",function(req,res){
    var informationUser=req.body;
     findUser(informationUser,(result)=>{
-        if(result.length === 0){
-            res.send({isTrue:"0"});
-        }else if(informationUser.password !== result[0].password){
+        if(result.length === 0) {
+            res.send({isTrue: "0"});
+        }
+        else if(informationUser.password !== result[0].password){
                 res.send({isTrue:"-1"});
-            }else{
-                res.send({isTrue:"1"});
-                console.log(req.headers.cookie);
             }
+        else{
+                req.session.loginUser = result[0].userName;
+                req.session.isLogin = true;
+                var Cookie = {};
+                req.headers.cookie && req.headers.cookie.split(';').forEach((cookie)=>{
+                    var part = cookie.split('=');
+                    Cookie[part[0].trim()] = (part[1]||'').trim();
+                });
+                if(Cookie.user !== req.session.loginUser){
+                    res.cookie('user',req.session.loginUser,'path=/');
+                }
+                res.send({isTrue:"1"});
+        }
 
     })
 });

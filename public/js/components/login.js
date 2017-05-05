@@ -25,10 +25,6 @@ class Login extends Component{
             document.getElementById("warn").innerHTML = "密码错误";
         }else{
             browserHistory.push('/home');
-            var userName = document.getElementById('userName').value;
-            console.log("cookie",userName);
-            document.cookie = 'name=username;path=/;domain=domain;secure';
-            console.log("document.cookie",document.cookie);
         }
     }
 
