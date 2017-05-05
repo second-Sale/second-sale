@@ -12,17 +12,17 @@ router.post("/login",function(req,res){
                 res.send({isTrue:"-1"});
             }
         else{
-                req.session.loginUser = result[0].userName;
-                req.session.isLogin = true;
-                var Cookie = {};
-                req.headers.cookie && req.headers.cookie.split(';').forEach((cookie)=>{
-                    var part = cookie.split('=');
-                    Cookie[part[0].trim()] = (part[1]||'').trim();
-                });
-                if(Cookie.user !== req.session.loginUser){
-                    res.cookie('user',req.session.loginUser,'path=/');
-                }
-                res.send({isTrue:"1"});
+            req.session.loginUser = result[0].userName;
+            req.session.isLogin = true;
+            var Cookie = {};
+            req.headers.cookie && req.headers.cookie.split(';').forEach((cookie)=>{
+                var part = cookie.split('=');
+                Cookie[part[0].trim()] = (part[1]||'').trim();
+            });
+            if(Cookie.user !== req.session.loginUser){
+                res.cookie('user',req.session.loginUser,'path=/');
+            }
+            res.send({isTrue:"1"});
         }
 
     })
