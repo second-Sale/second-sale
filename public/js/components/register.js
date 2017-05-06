@@ -9,12 +9,19 @@ class Register extends Component {
         var password = document.getElementById("password").value;
         var confirm = document.getElementById("confirm").value;
         if(userName === ''){
+            $('input[id=userName]').focus();
             document.getElementById('warn').innerHTML = '请输入用户名';
         }else if(password === ''){
+            $('input[id=password]').focus();
             document.getElementById('warn').innerHTML = '请输入密码';
         }else if(confirm === ''){
+            $('input[id=confirm]').focus();
             document.getElementById('warn').innerHTML = '请输入确认密码';
         }else if(password !== confirm){
+            $('input[id=password]').val('');
+            $('input[id=confirm]').val('');
+            $('input[id=password]').focus();
+
             document.getElementById('warn').innerHTML = '两次输入的密码不同，请重新输入';
         }else{
             this.props.onSubmit({userName,password});
@@ -24,7 +31,8 @@ class Register extends Component {
         let isExit = this.props.isExit;
          console.log("isExist", this.props.isExit);
         if(isExit){
-            console.log("isExit=1:",this.props.isExit);
+            $('input[id=userName]').val('');
+            $('input[id=userName]').focus();
             document.getElementById('warn').innerHTML = '用户已存在';
         }else{
             browserHistory.push('/login');

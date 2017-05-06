@@ -9,8 +9,10 @@ class Login extends Component{
         var userName = document.getElementById("userName").value;
         var password = document.getElementById("password").value;
         if(userName ===""){
+            $('input[id=userName]').focus();
             document.getElementById("warn").innerHTML = "用户名不能为空";
         }else if(password === ""){
+            $('input[id=possword]').focus();
             document.getElementById("warn").innerHTML = "密码不能为空";
         }else{
             this.props.onJudge({userName,password});
@@ -20,9 +22,14 @@ class Login extends Component{
     componentDidUpdate(){
         var isRight=this.props.isRight;
         if(isRight === "0"){
+            $('input[id=userName]').val('');
+            $('input[id=userName]').focus();
             document.getElementById("warn").innerHTML = "用户不存在";
         }else if(isRight === "-1"){
+            $('input[id=password]').val('');
+            $('input[id=password]').focus();
             document.getElementById("warn").innerHTML = "密码错误";
+
         }else{
             browserHistory.push('/home');
         }
