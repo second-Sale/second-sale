@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import {Link, browserHistory} from 'react-router';
+import PostMessage from '../containers/postMessage';
 
 class Nav extends Component{
     render(){
@@ -17,7 +18,7 @@ class Nav extends Component{
             <div>
                 <ul className="nav">
                     <li>首页</li>
-                    <li>发布信息</li>
+                    <Link to="PostMessage"><li>发布信息</li></Link>
                     <li>个人中心</li>
                 </ul>
             </div>

@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import Header from "../containers/header";
+import Nav from "../containers/nav";
 import Footer from "../containers/footer"
 import {Link, browserHistory} from 'react-router';
 
@@ -32,7 +32,7 @@ class Register extends Component {
     }
     render() {
         return <div>
-            <Header/>
+            <Nav/>
             <div className="backgroundImg">
                 <div className="main">
                     <center>
