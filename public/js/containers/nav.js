@@ -3,8 +3,13 @@ import Nav from '../components/nav';
 
 const mapStateToProps=(state)=>{
     return {
-        loginUser:state.login.loginUser
+        loginUser:state.login.loginUser,
     }
 };
 
-export default connect(mapStateToProps,()=>{return {}})(Nav);
+const mapDispatchToProps = (dispatch) =>{
+    return {logoutUser:()=>{
+        dispatch({type:'LOGOUT'});
+    }}
+}
+export default connect(mapStateToProps,mapDispatchToProps)(Nav);

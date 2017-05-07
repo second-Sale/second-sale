@@ -6,6 +6,7 @@ const cookieParser = require("cookie-parser");
 
 const addUser=require('./server/routers/insertUser');
 const login = require("./server/routers/login");
+const logout = require('./server/routers/logout');
 
 const app = new express();
 
@@ -23,6 +24,7 @@ app.use(session({
 
 app.use('/',addUser);
 app.use('/',login);
+app.use('/',logout);
 
 app.get('*', (req, res) => {
     "use strict";

@@ -3,14 +3,20 @@ import {Link, browserHistory} from 'react-router';
 import PostMessage from '../containers/postMessage';
 
 class Nav extends Component{
-
+    logout(){
+        this.props.logoutUser();
+    }
     render(){
         return <div>
             <div className="tip">
                 <span className="topic">二手市场，值得选择！</span>
-                <div className="userInformation">
-                    <Link to="Login"><span className="login">{this.props.loginUser? this.props.loginUser+', 你好！':"登录"}</span></Link>
-                    <Link to="Register"><span>{this.props.loginUser? "":"注册"}</span></Link>
+                <div id="userInformation" className={this.props.loginUser ?'hidden':''}>
+                    <Link to="Login"><span className="login">登录</span></Link>
+                    <Link to="Register"><span>注册</span></Link>
+                </div>
+                <div id="userInformation" className = {this.props.loginUser ?'':'hidden'}>
+                    <span className="login">{this.props.loginUser+', 你好！'}</span>
+                    <Link to="login"><span onClick={this.logout.bind(this)}>登出</span></Link>
                 </div>
             </div>
             <div className="logo">

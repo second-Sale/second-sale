@@ -11,7 +11,9 @@ import ResgierMiddleware from './middlewares/register';
 import LoginMiddleware from "./middlewares/login";
 import Nav from './containers/nav';
 import PostMessage from './containers/postMessage';
-const createStoreWithMiddleware = applyMiddleware(ResgierMiddleware,LoginMiddleware)(createStore);
+import NavMiddleware from './middlewares/nav'
+
+const createStoreWithMiddleware = applyMiddleware(ResgierMiddleware,LoginMiddleware,NavMiddleware)(createStore);
 
 const store = createStoreWithMiddleware(reducer);
 

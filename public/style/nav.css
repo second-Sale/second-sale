@@ -11,7 +11,7 @@
     color: white;
 }
 
-.userInformation{
+#userInformation{
     font-size: 14px;
     line-height: 40px;
     float:right;
