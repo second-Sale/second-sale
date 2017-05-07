@@ -22,9 +22,8 @@ router.post("/login",function(req,res){
             if(Cookie.user !== req.session.loginUser){
                 res.cookie('user',req.session.loginUser,'path=/');
             }
-            res.send({isTrue:"1"});
+            res.send({isTrue:"1",user:req.session.loginUser});
         }
-
     })
 });
 

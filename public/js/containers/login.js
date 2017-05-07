@@ -2,9 +2,9 @@ import {connect} from "react-redux";
 import Login from "../components/login";
 
 const mapStateToProps = (state)=> {
-    console.log(state.login.judge)
+    console.log('state',state);
      return {
-         isRight:state.login.judge
+         isRight:state.login.judge,
      }
 };
 

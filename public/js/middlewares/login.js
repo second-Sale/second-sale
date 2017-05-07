@@ -6,7 +6,7 @@ export default store => next => action =>{
           .send({userName:action.data.userName,password:action.data.password})
           .end((err,res)=>{
               console.log(res.body);
-              next({type:"LOGIN",judge:res.body.isTrue});
+              next({type:"LOGIN",judge:res.body});
           })
   }else{
       next(action);
