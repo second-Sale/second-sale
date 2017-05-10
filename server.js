@@ -7,6 +7,7 @@ const cookieParser = require("cookie-parser");
 const addUser=require('./server/routers/insertUser');
 const login = require("./server/routers/login");
 const logout = require('./server/routers/logout');
+const addGoods=require("./server/routers/insertGoods");
 
 const app = new express();
 
@@ -19,12 +20,15 @@ app.use(session({
     secret: 'a',
     resave: true,
     saveUninitialized: true,
-
+    cookie: {
+        maxAge: 10 * 1000
+    }
 }));
 
 app.use('/',addUser);
 app.use('/',login);
 app.use('/',logout);
+app.use('/',addGoods);
 
 app.get('*', (req, res) => {
     "use strict";
