@@ -16,7 +16,7 @@ class Nav extends Component{
                 </div>
                 <div id="userInformation" className = {this.props.loginUser ?'':'hidden'}>
                     <span className="login">{this.props.loginUser+', 你好！'}</span>
-                    <Link to="login"><span onClick={this.logout.bind(this)}>登出</span></Link>
+                    <Link to="home"><span onClick={this.logout.bind(this)}>登出</span></Link>
                 </div>
             </div>
             <div className="logo">
