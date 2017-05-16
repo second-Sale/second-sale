@@ -68,7 +68,7 @@ class PostMessage extends Component{
                     </div>
                     <div>
                         <label className="location">照片：</label>
-                        <input type="text" className="inputStyle" id="image"/>
+                        <input type="file" className="fileStyle" id="image"/>
                     </div>
                     <div>
                         <button type="submit" className="buttonType submitStyle" onClick={this.check.bind(this)}>提交</button>
