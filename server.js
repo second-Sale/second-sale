@@ -8,6 +8,7 @@ const addUser=require('./server/routers/insertUser');
 const login = require("./server/routers/login");
 const logout = require('./server/routers/logout');
 const addGoods=require("./server/routers/insertGoods");
+const allGoods=require("./server/routers/findAllGoods");
 
 const app = new express();
 
@@ -29,6 +30,7 @@ app.use('/',addUser);
 app.use('/',login);
 app.use('/',logout);
 app.use('/',addGoods);
+app.use('/', allGoods);
 
 app.get('*', (req, res) => {
     "use strict";

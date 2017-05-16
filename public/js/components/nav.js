@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import {Link, browserHistory} from 'react-router';
 import PostMessage from '../containers/postMessage';
+import Home from '../containers/home';
 
 class Nav extends Component{
     logout(){
@@ -24,7 +25,7 @@ class Nav extends Component{
             </div>
             <div>
                 <ul className="nav">
-                    <li>首页</li>
+                    <Link to="Home"><li>首页</li></Link>
                     <Link to="PostMessage"><li>发布信息</li></Link>
                     <li>个人中心</li>
                 </ul>
