@@ -28,7 +28,7 @@ class PostMessage extends Component{
            alert("请补全信息！");
         }else{
             var user=cookieInformation.user;
-            this.props.onSubmit({user,name,description,price,count,telephoneNumber});
+            this.props.onSubmit({user,name,description,price,count,telephoneNumber,image});
         }
     }
 
