@@ -2,6 +2,7 @@ import {connect} from 'react-redux';
 import Nav from '../components/nav';
 
 const mapStateToProps=(state)=>{
+    console.log('nav state:    ',state);
     return {
         loginUser:state.login.loginUser,
     }

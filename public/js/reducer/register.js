@@ -4,7 +4,6 @@ module.exports = ((state={isExitUser:''},action)=>{
             console.log("reducer",action.isExitUser);
             return({isExitUser:action.isExitUser});
         }
-        console.log("newState:",state.addUser.isExitUser);
         default: return state;
     }
 })

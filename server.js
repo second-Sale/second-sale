@@ -20,10 +20,7 @@ app.use(cookieParser());
 app.use(session({
     secret: 'a',
     resave: true,
-    saveUninitialized: true,
-    cookie: {
-        maxAge: 10 * 1000
-    }
+    saveUninitialized: true
 }));
 
 app.use('/',addUser);

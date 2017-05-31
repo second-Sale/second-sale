@@ -1,23 +1,37 @@
 import React,{Component} from 'react';
 import {Link, browserHistory} from 'react-router';
-import PostMessage from '../containers/postMessage';
-import Home from '../containers/home';
 
 class Nav extends Component{
     logout(){
         this.props.logoutUser();
+        browserHistory.push("/home");
+    }
+    Login() {
+        browserHistory.push("/login")
+    }
+
+    Sign() {
+        browserHistory.push('/register')
+    }
+    Home() {
+        browserHistory.push("/home")
+    }
+    publish(){
+        browserHistory.push("/postMessage")
+
     }
     render(){
+        console.log('nav component',this.props.loginUser);
         return <div>
             <div className="tip">
                 <span className="topic">二手市场，值得选择！</span>
                 <div id="userInformation" className={this.props.loginUser ?'hidden':''}>
-                    <Link to="Login"><span className="login">登录</span></Link>
-                    <Link to="Register"><span>注册</span></Link>
+                    <span className="login" onClick={this.Login.bind(this)}>登录</span>
+                    <span onClick={this.Sign.bind(this)}>注册</span>
                 </div>
                 <div id="userInformation" className = {this.props.loginUser ?'':'hidden'}>
                     <span className="login">{this.props.loginUser+', 你好！'}</span>
-                    <Link to="home"><span onClick={this.logout.bind(this)}>登出</span></Link>
+                    <span onClick={this.logout.bind(this)}>登出</span>
                 </div>
             </div>
             <div className="logo">
@@ -25,8 +39,8 @@ class Nav extends Component{
             </div>
             <div>
                 <ul className="nav">
-                    <Link to="Home"><li>首页</li></Link>
-                    <Link to="PostMessage"><li>发布信息</li></Link>
+                    <li onClick={this.Home.bind(this)}>首页</li>
+                    <li onClick={this.publish.bind(this)}>发布信息</li>
                     <li>个人中心</li>
                 </ul>
             </div>
