@@ -5,7 +5,7 @@ export default store => next => action =>{
         request.get("/getAllGoods")
             .end((err,res)=>{
                 console.log('allGoods',res.body);
-                next({type:"GETALLGOODS",data:res.body});
+                next({type:"GETALLGOODS",data:res.body.goods});
             })
     }
     else{
