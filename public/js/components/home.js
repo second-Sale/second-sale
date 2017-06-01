@@ -10,14 +10,15 @@ class Home extends Component{
             <Nav/>
             <div>
                 {
-                    this.props.allGoods === undefined ? "ssss" : this.props.allGoods.map((good)=> {
-                        document.getElementById("aaa").innerHTML = `${good.goodName}`;
-                        document.getElementById('pre').src = `{good.image}`;
+                    this.props.allGoods === undefined ? "ssss" : this.props.allGoods.map((good,index)=> {
+                        console.log('good image',good.image);
+                        return <div key={index}>
+                            <img src={good.image} alt="image"/>
+                            <span>{good.goodName}</span>
+                        </div>
                     })
 
                 }
-                <div id="aaa"></div>
-                <img src="" alt="图片" id="pre"/>
             </div>
         </div>
     }

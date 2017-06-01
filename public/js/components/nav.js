@@ -39,8 +39,8 @@ class Nav extends Component{
             </div>
             <div>
                 <ul className="nav">
-                    <li onClick={this.Home.bind(this)}>首页</li>
-                    <li onClick={this.publish.bind(this)}>发布信息</li>
+                    <li><span className="colorA" onClick={this.Home.bind(this)}>首页</span></li>
+                    <li><span className="colorA" onClick={this.publish.bind(this)}>发布信息</span></li>
                     <li>个人中心</li>
                 </ul>
             </div>

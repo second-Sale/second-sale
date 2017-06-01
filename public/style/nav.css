@@ -50,3 +50,16 @@ a{
 .nav a:hover{
     color:#b4a078;
 }
+
+span.colorA:focus, span.colorA:hover, span.colorA:active{
+    /*text-decoration: underline!important;*/
+    text-decoration: none;
+    border-bottom: 4px solid #b4a078;
+    color: #b4a078!important;
+}
+
+span.action  {
+    text-decoration: none!important;
+    border-bottom: 4px solid #b4a078!important;
+    color: #b4a078!important;
+}
