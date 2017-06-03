@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import Nav from '../containers/nav';
 import Footer from './footer';
+import ImageUplond from '../containers/imageUpload';
 import {Link, browserHistory} from 'react-router';
 
 class PostMessage extends Component{
@@ -31,7 +32,6 @@ class PostMessage extends Component{
             this.props.onSubmit({user,name,description,price,count,telephoneNumber,image});
         }
     }
-
     componentDidUpdate(){
         var isSaved=this.props.isSaved;
         if(isSaved){
@@ -66,10 +66,7 @@ class PostMessage extends Component{
                         <label className="location">联系方式：</label>
                         <input type="text" className="inputStyle" id="tel"/>
                     </div>
-                    <div>
-                        <label className="location">照片：</label>
-                        <input type="file" className="fileStyle" id="image"/>
-                    </div>
+                    <ImageUplond/>
                     <div>
                         <button type="submit" className="buttonType submitStyle" onClick={this.check.bind(this)}>提交</button>
                     </div>
