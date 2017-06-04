@@ -2,8 +2,10 @@ import {connect} from 'react-redux';
 import PostMessage from '../components/postMessage';
 
 const mapStateToProps = (state)=> {
+    console.log("image",state.ImageUpload.imageUpload);
    return {
-       isSaved:state.postMessage.isSaved
+       isSaved:state.postMessage.isSaved,
+       imageUpload:state.ImageUpload.imageUpload
    }
 };
 

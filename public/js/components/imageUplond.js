@@ -25,7 +25,7 @@ class Image extends Component{
             .send(formData)
             .end((err,res)=>{
                 console.log(res.body.filePath);
-                //this.props.uploadImage(res.body.filePath);
+                this.props.uploadImage(res.body.filePath);
             });
     }
 

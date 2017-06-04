@@ -13,8 +13,8 @@ class PostMessage extends Component{
         var price=document.getElementById("price").value;
         var count=document.getElementById("count").value;
         var telephoneNumber=document.getElementById("tel").value;
-        var image=document.getElementById("image").value;
-
+        var image=this.props.imageUpload;
+        console.log('postMessage',image);
         document.cookie  && document.cookie.split(';').forEach((element)=>{
             var part = element.split('=');
             cookieInformation[part[0].trim()] = (part[1]||'').trim();
@@ -24,8 +24,7 @@ class PostMessage extends Component{
         if(!cookieInformation.user){
             browserHistory.push('/login');
         }
-        else if(name === '' || description === '' || price === '' || count === '' || telephoneNumber === ''){
-            console.log(name);
+        else if(name === '' || description === '' || price === '' || count === '' || telephoneNumber === '' || image === undefined){
            alert("请补全信息！");
         }else{
             var user=cookieInformation.user;
