@@ -1,0 +1,15 @@
+.imgStyle{
+    width:400px;
+    height:200px;
+    margin-left: 25px;
+}
+.listType{
+    display:flex;
+    flex-direction: row;
+}
+.typeface{
+    text-align: center;
+    font-size: 12px;
+    font-weight:500;
+    display:block;
+}

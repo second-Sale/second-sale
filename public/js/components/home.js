@@ -8,13 +8,13 @@ class Home extends Component{
     render(){
         return <div>
             <Nav/>
-            <div>
+            <div className="listType">
                 {
                     this.props.allGoods === undefined ? "ssss" : this.props.allGoods.map((good,index)=> {
                         console.log('good image',good.image);
                         return <div key={index}>
-                            <img src={good.image} alt="image"/>
-                            <span>{good.goodName}</span>
+                            <img src={good.image} alt="image" className="imgStyle"/>
+                            <span className="typeface">{good.goodName}</span>
                         </div>
                     })
 
